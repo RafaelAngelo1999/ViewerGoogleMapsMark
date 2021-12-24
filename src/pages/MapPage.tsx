@@ -33,16 +33,9 @@ const MapPage = () => {
 
     const [position, setPosition] =
     React.useState<google.maps.LatLngLiteral | google.maps.LatLng >({
-      lat: -16.08008,
-      lng: -47.98503,
+      lat: IMOVEIS[0].lat,
+      lng: IMOVEIS[0].lng,
     });
-
-  const handleAlter = () => {
-    setPosition({
-      lat: -16.08008,
-      lng: -47.98503,
-    })
-  };
 
   const onMapLoad = (map: google.maps.Map) => {
     setMap(map);
@@ -119,7 +112,6 @@ const MapPage = () => {
 
   return (
     <div className="map">
-      <button onClick={handleAlter}>Teste</button>
       <LoadScript
         googleMapsApiKey={REACT_APP_GOOGLE_API_KEY}
         libraries={["places"]}
@@ -128,7 +120,7 @@ const MapPage = () => {
           onLoad={onMapLoad}
           mapContainerStyle={{ width: "100%", height: "100%" }}
           center={position}
-          zoom={15}
+          zoom={6}
         >
           <div className="address">
             <StandaloneSearchBox
