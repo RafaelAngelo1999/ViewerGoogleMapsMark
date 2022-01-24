@@ -13,7 +13,7 @@ https://rafaelangelo1999.github.io/ViewerGoogleMapsMark/
 
 Foi desenvolvido uma rotina para utilizar a API do Google para obter as coordenadas passando o endereço como parametro e salvando no banco, foi inserido como constante na aplicação para ser utilizada
 
-For production environments...
+API para obter as coordenadas utilizando a API do Google com o endereço
 
 ```[HttpGet]
         [Route("Obter Geocalização")]
